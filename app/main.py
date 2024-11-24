@@ -3,6 +3,10 @@ from fastapi.responses import HTMLResponse
 from app.routes import auth
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+import uvicorn
+
+if __name__ == "__main__":
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
 
 app = FastAPI()
 
@@ -14,4 +18,4 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/login", response_class=HTMLResponse)
 def show_login_page(request: Request):
-    return templates.TemplateResponse("login.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request})
