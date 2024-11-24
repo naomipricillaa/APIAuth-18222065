@@ -17,7 +17,6 @@ templates = Jinja2Templates(directory="app/templates")
 def show_login_page(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-
 # Run the app (local development only)
 if __name__ == "__main__":
     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
