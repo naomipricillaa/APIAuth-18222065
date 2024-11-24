@@ -14,7 +14,7 @@ templates = Jinja2Templates(directory="app/templates")
 
 # Login route
 @app.get("/", response_class=HTMLResponse)
-def show_login_page(request: Request):
+async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 # Run the app (local development only)
