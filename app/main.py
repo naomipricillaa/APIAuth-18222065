@@ -8,14 +8,14 @@ import uvicorn
 app = FastAPI()
 
 # Register routes
-app.include_router(auth.router, prefix="/auth", tags=["auth"])
+# app.include_router(auth.router, prefix="/auth", tags=["auth"])
 
 # Add template directory
 BASE_DIR = Path(__file__).resolve().parent
 templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
 # Login route
-@app.get("/login", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse)
 def show_login_page(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
