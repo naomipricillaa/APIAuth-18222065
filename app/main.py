@@ -17,7 +17,6 @@ templates = Jinja2Templates(directory="app/templates")
 def show_login_page(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-app.include_router(supabase_router)
 
 # Run the app (local development only)
 if __name__ == "__main__":

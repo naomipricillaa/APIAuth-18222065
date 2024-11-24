@@ -102,20 +102,6 @@
 <body>
     <div class="login-container">
         <h1>Login</h1>
-        <form action="/auth/username-password-login" method="post">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            
-            <button type="submit">Login</button>
-        </form>
-
-        <div class="divider">
-            <span>OR</span>
-        </div>
-
         <form action="/auth/login" method="get">
             <button type="submit" class="google-login">Login with Google</button>
         </form>
