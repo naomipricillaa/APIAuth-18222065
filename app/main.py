@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent
 TEMPLATE_DIR = BASE_DIR / "templates"
 
 # Initialize templates
-templates = Jinja2Templates(directory=str(TEMPLATE_DIR))
+templates = Jinja2Templates(directory=str(TEMPLATE_DIR.resolve()))
 
 # Login route
 @app.get("/", response_class=HTMLResponse)
