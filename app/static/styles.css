@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #8fdbd8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    align-items: center;
+}
+
+.text-content {
+    text-align: justify;
+    flex: 1;
+    padding: 80px;
+    align-items: center;
+}
+
+.text-content h1 {
+    font-size: 23px;
+    color: #f775a9;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+
+.button-container {
+    margin-top: 30px;
+}
+
+.btn-start {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #f775a9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-start:hover {
+    background-color: #f77589;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #333;
+}
+
+.login-container h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* margin-bottom: 1.5rem; */
+}
+
+.login-container label {
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.login-container input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-container button {
+    background-color: #2575fc;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #1b5dbf;
+}
+
+.login-container .divider {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.login-container .divider::before,
+.login-container .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+}
+
+.login-container .divider span {
+    margin: 0 0.8rem;
+    color: #666;
+}
+
+.login-container .google-login {
+    background-color: #f775a9;
+}
+
+.login-container .google-login:hover {
+    background-color: #f77589;
+}
+
+.header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; /* Opsional, jika Anda ingin header tetap terlihat saat scroll */
+    top: 0; /* Opsional, hanya untuk sticky header */
+    z-index: 1000; /* Agar header berada di atas elemen lain */
+    width: 100%; /* Pastikan header meluas ke seluruh lebar */
+}
+
+.home-container {
+    flex: 1; /* Agar konten utama mengambil ruang yang tersisa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 20px;
+    color: #f775a9;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 14px;
+    color: #f775a9;
+    transition: color 0.3s;
+    margin-right: 30px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Search Section Styles */
+.search-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    color: #f775a9;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #f775a9;
+    margin-bottom: 1.5rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #f775a9;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498DB;
+}
+
+.btn-submit {
+    background-color: #f775a9;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #f77589;
+}
+
+/* Results Section Styles */
+.results-container {
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.hotel-card {
+    background-color: #f775a9;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.hotel-card p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+    color: #ffffff;
+}
